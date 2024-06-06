@@ -2,26 +2,27 @@
   <ul class="flex col row">
     <ServiceCard
         v-if="services"
-        v-for="service in services" :key="service.idValue()"
+        v-for="service in services" :key="service.id"
 
-        :id="service.idValue()"
-        :name="service.nameValue()"
-        :icon="service.iconValue()"
-        :description="service.descriptionValue()" />
+        :id="service.id"
+        :name="service.name"
+        :icon="service.icon"
+        :description="service.description" />
   </ul>
 </template>
 
 <script>
-import { useServiceRepository } from "@/useRepository";
 import ServiceCard from "@/components/services/ServiceCard.vue";
+import { mapGetters } from "vuex";
 
 export default {
   name: "ServiceCards",
   components: { ServiceCard },
-  setup() {
-    const services = useServiceRepository();
-
-    return { services };
+  computed: {
+    ...mapGetters(
+        'serviceStore', ['getServices'],
+    ),
+    services() { return this.getServices; },
   },
 };
 </script>

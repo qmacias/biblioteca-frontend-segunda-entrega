@@ -25,9 +25,7 @@ export default {
     ...mapGetters(
         'navbarStore', ['getNavbar'],
     ),
-    navbar() {
-      return this.getNavbar;
-    },
+    navbar() { return this.getNavbar; },
   },
 };
 </script>

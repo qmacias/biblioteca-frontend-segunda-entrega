@@ -11,7 +11,7 @@ function useRepository(repositorySpecification) {
 
     return items;
 }
-
-export function useServiceRepository() {
-    return useRepository('serviceRepository');
-}
+/*
+export function useSomeEntityRepository() {
+    return useRepository('someEntityRepository');
+}*/

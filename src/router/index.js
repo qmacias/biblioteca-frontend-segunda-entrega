@@ -1,11 +1,12 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 
 import HomeView from '@/views/HomeView.vue';
-import SearchBooksView from "@/views/books/SearchBooksView.vue";
-import SearchServicesView from "@/views/services/SearchServicesView.vue";
+import ServicesView from "@/views/ServicesView.vue";
 import ContactView from "@/views/ContactView.vue";
 import LoginView from "@/views/auth/LoginView.vue";
 import SignupView from "@/views/auth/SignupView.vue";
+
+import SearchBooksView from "@/views/books/SearchBooksView.vue";
 
 const BASE_TITLE = "Biblioteca Online |";
 
@@ -29,7 +30,7 @@ const routes = [
   {
     path: '/services',
     name: 'services',
-    component: SearchServicesView,
+    component: ServicesView,
     meta: {
       title: `${BASE_TITLE} Servicios`,
     },
