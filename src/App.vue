@@ -2,7 +2,7 @@
   <div
       id="container"
       class="flex col">
-    <NavItems />
+    <NavbarItems />
     <Router-View />
     <Footer />
   </div>
@@ -12,7 +12,7 @@
 import { useRoute } from "vue-router";
 import { watchEffect } from "vue";
 
-import NavItems from "@/components/navbar/NavItems.vue";
+import NavbarItems from "@/components/navbar/NavbarItems.vue";
 import Footer from "@/components/Footer.vue";
 
 const route = useRoute();

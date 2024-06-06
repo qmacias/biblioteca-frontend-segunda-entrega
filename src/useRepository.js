@@ -12,10 +12,6 @@ function useRepository(repositorySpecification) {
     return items;
 }
 
-export function useNavItemRepository() {
-    return useRepository('navItemRepository');
-}
-
 export function useServiceRepository() {
     return useRepository('serviceRepository');
 }

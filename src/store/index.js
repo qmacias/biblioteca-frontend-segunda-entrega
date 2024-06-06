@@ -1,11 +1,13 @@
 import { createStore } from 'vuex';
 
-import bookHeaderStore from "@/store/books/bookHeaderStore";
-import serviceHeaderStore from "@/store/services/serviceHeaderStore";
+import bookStore from "@/store/books/bookStore";
+import navbarStore from "@/store/navbar/navbarStore";
+import serviceStore from "@/store/services/serviceStore";
 
 export default createStore({
   modules: {
-    bookHeaderStore,
-    serviceHeaderStore,
+    bookStore,
+    navbarStore,
+    serviceStore,
   },
 });

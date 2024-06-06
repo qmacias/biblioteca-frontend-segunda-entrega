@@ -37,7 +37,9 @@ export default {
     return { isMobileView };
   },
   computed: {
-    ...mapGetters('serviceHeaderStore', ['getHeader']),
+    ...mapGetters(
+        'serviceStore', ['getHeader'],
+    ),
   },
 };
 </script>
