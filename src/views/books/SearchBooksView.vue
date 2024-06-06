@@ -3,17 +3,11 @@
     <section class="flex col">
       <MobileHeader
           v-if="isMobileView"
-          title="Nuestros Libros"
-          mainText="Desde clásicos atemporales hasta las últimas novedades literarias."
-          additionalText="Explora nuestra vasta colección de libros en diversos géneros y formatos."
-      />
+          v-bind="getHeader" />
 
       <DesktopHeader
           v-else
-          title="Nuestros Libros"
-          mainText="Desde clásicos atemporales hasta las últimas novedades literarias."
-          additionalText="Explora nuestra vasta colección de libros en diversos géneros y formatos."
-      />
+          v-bind="getHeader" />
 
       <BookCards />
     </section>
@@ -22,6 +16,7 @@
 
 <script>
 import useWindowResize from "@/useWindowsResize";
+import { mapGetters } from "vuex";
 
 import BookCards from "@/components/books/BookCards.vue";
 import MobileHeader from "@/components/MobileHeader.vue";
@@ -41,9 +36,8 @@ export default {
 
     return { isMobileView };
   },
+  computed: {
+    ...mapGetters('bookHeaderStore', ['getHeader']),
+  },
 };
 </script>
-
-<style scoped>
-
-</style>

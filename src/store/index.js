@@ -1,14 +1,11 @@
-import { createStore } from 'vuex'
+import { createStore } from 'vuex';
+
+import bookHeaderStore from "@/store/books/bookHeaderStore";
+import serviceHeaderStore from "@/store/services/serviceHeaderStore";
 
 export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
-  }
-})
+    bookHeaderStore,
+    serviceHeaderStore,
+  },
+});

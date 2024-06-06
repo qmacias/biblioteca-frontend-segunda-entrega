@@ -3,17 +3,11 @@
     <section class="flex col">
       <MobileHeader
           v-if="isMobileView"
-          title="Nuestros Servicios"
-          mainText="Recomendaciones a tu medida y acceso a recursos digitales exclusivos."
-          additionalText="Ofrecemos una amplia gama de servicios para garantizar tu satisfacción."
-      />
+          v-bind="getHeader" />
 
       <DesktopHeader
           v-else
-          title="Nuestros Servicios"
-          mainText="Recomendaciones a tu medida y acceso a recursos digitales exclusivos."
-          additionalText="Ofrecemos una amplia gama de servicios para garantizar tu satisfacción."
-      />
+          v-bind="getHeader" />
 
       <ServiceCards />
     </section>
@@ -22,6 +16,7 @@
 
 <script>
 import useWindowResize from "@/useWindowsResize";
+import { mapGetters } from "vuex";
 
 import ServiceCards from "@/components/services/ServiceCards.vue";
 import MobileHeader from "@/components/MobileHeader.vue";
@@ -39,9 +34,10 @@ export default {
       isMobileView,
     } = useWindowResize(1600);
 
-    return {
-      isMobileView,
-    };
+    return { isMobileView };
+  },
+  computed: {
+    ...mapGetters('serviceHeaderStore', ['getHeader']),
   },
 };
 </script>
