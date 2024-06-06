@@ -2,12 +2,17 @@
   <ul class="flex col row">
     <BookCard
         v-if="books"
-        v-for="book in books" :key="book.id"
 
-        :id="book.id"
-        :img="book.img"
-        :title="book.title"
-        :author="book.author" />
+        v-for="({
+          id,
+          img,
+          title,
+          author,
+        }) in books" :key="id"
+        :id="id"
+        :img="img"
+        :title="title"
+        :author="author" />
   </ul>
 </template>
 

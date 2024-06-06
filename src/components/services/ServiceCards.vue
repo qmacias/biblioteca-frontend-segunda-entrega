@@ -2,12 +2,17 @@
   <ul class="flex col row">
     <ServiceCard
         v-if="services"
-        v-for="service in services" :key="service.id"
 
-        :id="service.id"
-        :name="service.name"
-        :icon="service.icon"
-        :description="service.description" />
+        v-for="({
+          id,
+          name,
+          icon,
+          description,
+        }) in services" :key="id"
+        :id="id"
+        :name="name"
+        :icon="icon"
+        :description="description" />
   </ul>
 </template>
 

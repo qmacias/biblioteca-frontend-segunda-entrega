@@ -4,11 +4,15 @@
       <ul class="flex col row">
         <NavbarItem
             v-if="navbar"
-            v-for="navbarItem in navbar" :key="navbarItem.id"
 
-            :id="navbarItem.id"
-            :path="navbarItem.path"
-            :label="navbarItem.label" />
+            v-for="({
+              id,
+              path,
+              label,
+            }) in navbar" :key="id"
+            :id="id"
+            :path="path"
+            :label="label" />
       </ul>
     </nav>
   </header>

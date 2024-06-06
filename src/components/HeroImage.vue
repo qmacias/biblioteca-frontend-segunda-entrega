@@ -4,13 +4,14 @@
         && heroImg.img">
 
     <source
+        v-if="heroImg.sources"
+
         v-for="({
           id,
           type,
           media,
           srcset,
-        }) in heroImg.sources"
-          :key="id"
+        }) in heroImg.sources" :key="id"
           :type="type"
           :media="media"
           :srcset="srcset">
