@@ -5,9 +5,5 @@ import navbarStore from "@/store/navbar/navbarStore";
 import serviceStore from "@/store/services/serviceStore";
 
 export default createStore({
-  modules: {
-    bookStore,
-    navbarStore,
-    serviceStore,
-  },
+  modules: { bookStore, navbarStore, serviceStore },
 });

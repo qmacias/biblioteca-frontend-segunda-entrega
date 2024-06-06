@@ -1,43 +1,28 @@
 <template>
   <ul class="flex col row">
     <BookCard
-        v-for="({
-              id,
-              img,
-              title,
-              author,
-            }) in books"
-        :key="id"
-        :img="img"
-        :title="title"
-        :author="author" />
+        v-if="books"
+        v-for="book in books" :key="book.id"
+
+        :id="book.id"
+        :img="book.img"
+        :title="book.title"
+        :author="book.author" />
   </ul>
 </template>
 
 <script>
 import BookCard from "@/components/books/BookCard.vue";
+import { mapGetters } from "vuex";
 
 export default {
   name: "BookCards",
-  components: {
-    BookCard,
-  },
-  data() {
-    const books = [];
-
-    return {
-      books: books,
-    };
-  },
-  mounted() {
-    this.getBooks();
-  },
-  methods: {
-    getBooks() {
-      fetch(`${process.env.VUE_APP_API_URL}/books.json`)
-          .then((res) => res.json()).then((data) => this.books = data)
-          .catch((error) => console.error('Error al pedir los libros:', error));
-    },
+  components: { BookCard },
+  computed: {
+    ...mapGetters(
+        'bookStore', ['getBooks'],
+    ),
+    books() { return this.getBooks; },
   },
 };
 </script>
