@@ -19,17 +19,17 @@
         </p>
       </header>
 
-      <HeroImage />
+      <HeroIllustration />
     </section>
   </main>
 </template>
 
 <script>
-import HeroImage from "@/components/hero/HeroImage.vue";
+import HeroIllustration from "@/components/hero/HeroIllustration.vue";
 
 export default {
   name: "HomeView",
-  components: { HeroImage },
+  components: { HeroIllustration },
 };
 </script>
 
