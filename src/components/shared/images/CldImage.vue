@@ -1,5 +1,8 @@
 <template>
-  <AdvancedImage :cld-img="img" loading="lazy"/>
+  <AdvancedImage
+      :alt="alt"
+      :cld-img="img"
+      loading="lazy" />
 </template>
 
 <script setup>
@@ -13,6 +16,7 @@ const cld = new Cloudinary({
 });
 
 const props = defineProps({
+  alt: String,
   publicId: String,
 });
 
