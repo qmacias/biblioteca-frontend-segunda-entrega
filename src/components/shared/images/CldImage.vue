@@ -16,8 +16,14 @@ const cld = new Cloudinary({
 });
 
 const props = defineProps({
-  alt: String,
-  publicId: String,
+  alt: {
+    type: String,
+    required: true,
+  },
+  publicId: {
+    type: String,
+    required: true,
+  },
 });
 
 const img = cld.image(props.publicId);

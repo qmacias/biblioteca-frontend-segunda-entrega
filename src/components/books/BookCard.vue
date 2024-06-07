@@ -2,8 +2,8 @@
   <li>
     <figure class="flex bg1 border bd3">
       <CldImage
-          :alt="altGenerator()"
-          :publicId="imgPublicId" />
+          :publicId="imgPublicId"
+          :alt="`${title}, a book release by ${author}.`" />
 
       <figcaption class="flex col">
         <h3>{{ title }}</h3>
@@ -33,11 +33,6 @@ export default {
     imgPublicId: {
       type: String,
       required: true,
-    },
-  },
-  methods: {
-    altGenerator() {
-      return `${this.title}, a book release by ${this.author}.`;
     },
   },
 };
