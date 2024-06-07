@@ -48,6 +48,7 @@ const routes = [
     name: 'login',
     component: LoginView,
     meta: {
+      hideFooter: true,
       title: `${BASE_TITLE} Ingresar`,
     },
   },
@@ -56,6 +57,7 @@ const routes = [
     name: 'signup',
     component: SignupView,
     meta: {
+      hideFooter: true,
       title: `${BASE_TITLE} Registrarse`,
     },
   },

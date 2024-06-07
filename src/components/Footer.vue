@@ -1,5 +1,7 @@
 <template>
-  <footer class="bg1 border bd3">
+  <footer
+      v-if="showFooter"
+      class="bg1 border bd3">
     <p>Todos los derechos reservados <span>&copy; 2024</span></p>
   </footer>
 </template>
@@ -7,6 +9,9 @@
 <script>
 export default {
   name: "Footer",
+  props: {
+    showFooter: Boolean,
+  },
 };
 </script>
 

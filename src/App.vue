@@ -4,20 +4,22 @@
       class="flex col">
     <NavbarItems />
     <Router-View />
-    <Footer />
+    <Footer :showFooter="showFooter" />
   </div>
 </template>
 
 <script setup>
 import { useRoute } from "vue-router";
-import { watchEffect } from "vue";
+import { watchEffect, ref } from "vue";
 
 import NavbarItems from "@/components/navbar/NavbarItems.vue";
 import Footer from "@/components/Footer.vue";
 
 const route = useRoute();
+const showFooter = ref(true);
 
 watchEffect(() => {
+  showFooter.value = !route.meta.hideFooter;
   document.title = route.meta.title || "Biblioteca Online";
 });
 </script>
