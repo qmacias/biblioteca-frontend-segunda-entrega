@@ -5,14 +5,14 @@
 
         v-for="({
           id,
-          img,
           title,
           author,
+          img: { publicId },
         }) in books" :key="id"
         :id="id"
-        :img="img"
         :title="title"
-        :author="author" />
+        :author="author"
+        :imgPublicId="publicId" />
   </ul>
 </template>
 

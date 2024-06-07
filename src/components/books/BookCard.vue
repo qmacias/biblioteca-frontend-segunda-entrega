@@ -3,7 +3,7 @@
     <figure class="flex bg1 border bd3">
       <CldImage
           :alt="altGenerator()"
-          :publicId="img.publicId" />
+          :publicId="imgPublicId" />
 
       <figcaption class="flex col">
         <h3>{{ title }}</h3>
@@ -22,15 +22,15 @@ export default {
     CldImage,
   },
   props: {
-    img: {
-      type: Object,
-      required: true,
-    },
     title: {
       type: String,
       required: true,
     },
     author: {
+      type: String,
+      required: true,
+    },
+    imgPublicId: {
       type: String,
       required: true,
     },
