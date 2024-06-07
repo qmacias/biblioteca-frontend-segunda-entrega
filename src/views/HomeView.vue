@@ -25,13 +25,11 @@
 </template>
 
 <script>
-import HeroImage from "@/components/HeroImage.vue";
+import HeroImage from "@/components/hero/HeroImage.vue";
 
 export default {
   name: "HomeView",
-  components: {
-    HeroImage,
-  },
+  components: { HeroImage },
 };
 </script>
 
