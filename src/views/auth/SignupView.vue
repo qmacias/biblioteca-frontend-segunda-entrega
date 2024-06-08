@@ -50,7 +50,7 @@
               <label class="box border bd3" for="country">País de residencia</label>
 
               <select class="box bg1 border bd3" style="padding: 10px;" id="country" name="country">
-                <optgroup label="countries">
+                <optgroup label="Países">
                   <option value="" selected>
                     Seleccionar...
                   </option>

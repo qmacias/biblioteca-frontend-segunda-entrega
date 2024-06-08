@@ -138,11 +138,43 @@ main .boxx {
 main .inner-boxx {
   position: absolute;
   width: calc(100% - 3.1rem);
-  height: calc(100% - 3.1rem);
+  height: calc(100% - 2.5rem);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* background-color: tomato; */
+  overflow-y: auto;
+  /*background-color: tomato;*/
+}
+
+form {
+  overflow-y: auto;
+}
+
+/* Scrollbar (Chrome, Safari, Opera) */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color1);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color4);
+  border-radius: 6px;
+  border: 3px solid var(--color1)
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color5);
+}
+
+/* Scrollbar (Firefox) */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color4) var(--color1);
 }
 
 form textarea {
