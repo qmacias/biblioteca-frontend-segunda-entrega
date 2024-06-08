@@ -34,10 +34,6 @@ export default {
 </script>
 
 <style scoped>
-/**
- * HomeView
-*/
-
 main section {
   position: relative;
   padding: 0;

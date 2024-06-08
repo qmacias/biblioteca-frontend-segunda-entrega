@@ -16,10 +16,6 @@ export default {
 </script>
 
 <style scoped>
-/**
- * Footer
-*/
-
 footer {
   margin: 7px 7px 8px 7px;
   padding: 11px;

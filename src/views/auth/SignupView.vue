@@ -96,6 +96,8 @@ input {
   color: var(--color6);
 }
 
+/* INICIO -> Estilos compartidos */
+
 button,
 select,
 optgroup,
@@ -112,6 +114,8 @@ input::placeholder,
 textarea::placeholder {
   color: var(--color4);
 }
+
+/* FINAL -> Estilos compartidos */
 
 label {
   opacity: 0.8;

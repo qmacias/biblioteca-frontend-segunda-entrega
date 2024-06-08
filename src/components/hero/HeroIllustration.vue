@@ -24,10 +24,6 @@ export default {
 </script>
 
 <style scoped>
-/**
- * HeroImage
-*/
-
 picture {
   position: absolute;
   top: 0;
