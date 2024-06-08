@@ -142,6 +142,12 @@ select {
   padding-right: 1rem !important;
 }
 
+select option,
+select optgroup {
+  background-color: var(--color1);
+  color: var(--color4);
+}
+
 main {
   width: 100%;
   overflow: hidden;
