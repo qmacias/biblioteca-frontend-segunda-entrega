@@ -51,14 +51,16 @@ button,
 select,
 optgroup,
 input[type="date"],
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
   font-family: Inter, sans-serif;
 }
 
 select,
 optgroup,
 input[type="date"],
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: var(--color4);
 }
 

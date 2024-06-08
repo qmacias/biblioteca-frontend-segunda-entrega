@@ -40,6 +40,7 @@ const routes = [
     name: 'contact',
     component: ContactView,
     meta: {
+      hideFooter: true,
       title: `${BASE_TITLE} Contacto`,
     },
   },
