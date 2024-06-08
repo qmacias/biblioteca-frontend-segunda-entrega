@@ -27,7 +27,7 @@ watchEffect(() => {
 <style>
 :root {
   /*
-      https://coolors.co/palette/e3f2fd-bbdefb-90caf9-64b5f6-42a5f5-2196f3-1e88e5-1976d2-1565c0-0d47a1
+    https://coolors.co/palette/e3f2fd-bbdefb-90caf9-64b5f6-42a5f5-2196f3-1e88e5-1976d2-1565c0-0d47a1
   */
   --color1: #A9D6E5;
   --color2: #82b6ca;
@@ -39,6 +39,19 @@ watchEffect(() => {
   --color8: #01497C;
   --color9: #013A63;
   --color10: #012A4A;
+
+  /*
+    https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529
+  *//*
+  --color1: #F8F9FA;
+  --color2: #E9ECEF;
+  --color3: #DEE2E6;
+  --color4: #CED4DA;
+  --color5: #ADB5BD;
+  --color6: #6C757D;
+  --color7: #495057;
+  --color8: #343A40;
+  --color9: #212529;*/
 }
 
 .c1 { color: var(--color1); }
