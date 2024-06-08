@@ -25,10 +25,6 @@ watchEffect(() => {
 </script>
 
 <style>
-/**
- * App
-*/
-
 :root {
   /*
       https://coolors.co/palette/e3f2fd-bbdefb-90caf9-64b5f6-42a5f5-2196f3-1e88e5-1976d2-1565c0-0d47a1
@@ -194,63 +190,11 @@ body {
   font: 1em/1.618 Inter, sans-serif;
 }
 
-/*----------------
-    Animations
-----------------*/
-
 a:focus,
 input:focus,
 button:focus,
 select:focus,
 textarea:focus {
   outline: 2px solid var(--color3);
-}
-
-header#form-header {
-  box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.1), 2px 0 15px -3px rgba(0, 0, 0, 0.2);
-}
-
-/*--------------
-    Ingresar
---------------*/
-
-header#form-header nav ul li:first-child a {
-  color: var(--color8);
-  transition: color 0.1s ease-in-out, transform 0.2s ease-in-out;
-}
-
-header#form-header nav ul li:first-child a:hover {
-  color: var(--color6);
-  transform: translateY(-0.6px);
-}
-
-header#form-header nav ul li:last-child a {
-  color: white;
-  background-color: var(--color5);
-  box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.1), 2px 0 15px -3px rgba(0, 0, 0, 0.1);
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.6s ease-in-out;
-}
-
-header#form-header nav ul li:last-child a:hover {
-  color: whitesmoke;
-  background-color: var(--color4);
-  box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.1), 8px 0 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-form#login-form button,
-form#signup-form button,
-form#contact-form button {
-  color: whitesmoke;
-  background-color: var(--color4);
-  box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.1), 2px 0 15px -3px rgba(0, 0, 0, 0.1);
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.6s ease-in-out;
-}
-
-form#login-form button:hover,
-form#signup-form button:hover,
-form#contact-form button:hover {
-  color: white;
-  background-color: var(--color5);
-  box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.1), 8px 0 15px -3px rgba(0, 0, 0, 0.1);
 }
 </style>

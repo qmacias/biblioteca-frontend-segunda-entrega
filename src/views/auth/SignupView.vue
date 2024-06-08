@@ -1,9 +1,9 @@
 <template>
-  <main id="signup-main">
+  <main>
     <div class="boxx bg1 border bd3">
       <div class="inner-boxx">
         <!-- Cambiar por "post" en el futuro! -->
-        <form id="signup-form" class="flex col" action="../../index.html" method="get">
+        <form class="flex col" action="#" method="get">
           <h2>Registrarse</h2>
 
           <div class="flex roww">
@@ -50,7 +50,7 @@
               <label class="box border bd3" for="country">País de residencia</label>
 
               <select class="box bg1 border bd3" style="padding: 10px;" id="country" name="country">
-                <optgroup label="Paises">
+                <optgroup label="countries">
                   <option value="" selected>
                     Seleccionar...
                   </option>
@@ -75,7 +75,6 @@
 <script>
 export default {
   name: "SignupView",
-  components: {},
 };
 </script>
 
@@ -83,12 +82,6 @@ export default {
 /*main {
   min-height: 80.2vh;
 }*/
-
-header#form-header {
-  margin: 14px 7px 14px 7px;
-  padding: 5px;
-  border-radius: 10px;
-}
 
 button {
   font-size: 1rem;
@@ -122,7 +115,7 @@ label {
   opacity: 0.8;
   color: white;
   background-color: var(--color5);
-  box-shadow: 0px 2px 15px -3px rgba(0, 0, 0, 0.1), 2px 0px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.1), 2px 0 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -152,15 +145,16 @@ main {
   justify-content: center;
 }
 
-main#signup-main .boxx {
+main .boxx {
   position: relative;
   width: 100%;
   max-width: 514px;
   height: 778px;
   border-radius: 10px;
+  box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.1), 2px 0 15px -3px rgba(0, 0, 0, 0.2);
 }
 
-main#signup-main .inner-boxx {
+main .inner-boxx {
   position: absolute;
   width: calc(100% - 3.1rem);
   height: calc(100% - 3.1rem);
@@ -174,9 +168,13 @@ main#signup-main .inner-boxx {
   flex-flow: row wrap;
 }
 
-form#signup-form .flex.roww:nth-child(n) div {
+form .flex.roww:nth-child(n) div {
   flex-basis: 100%;
 }
+
+/**
+ * Responsive
+*/
 
 @media (min-width: 450px) {
   /*
@@ -188,25 +186,33 @@ form#signup-form .flex.roww:nth-child(n) div {
   main {
     min-height: 87vh;
   }
-
-  header#form-header nav ul {
-    justify-content: space-between;
-
-  }
-
-  header#form-header nav ul li {
-    flex-basis: 10em;
-  }
 }
 
 @media (min-width: 545px) {
-  form#signup-form .flex.roww:nth-child(n) div {
+  form .flex.roww:nth-child(n) div {
     flex-basis: 50%;
   }
 
-  main#signup-main .boxx {
+  main .boxx {
     max-width: 514px;
     height: 465px;
   }
+}
+
+/**
+ * Animations
+*/
+
+form button {
+  color: whitesmoke;
+  background-color: var(--color4);
+  box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.1), 2px 0 15px -3px rgba(0, 0, 0, 0.1);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.6s ease-in-out;
+}
+
+form button:hover {
+  color: white;
+  background-color: var(--color5);
+  box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.1), 8px 0 15px -3px rgba(0, 0, 0, 0.1);
 }
 </style>

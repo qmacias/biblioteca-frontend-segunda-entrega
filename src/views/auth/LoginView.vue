@@ -1,9 +1,9 @@
 <template>
-  <main id="login-main">
+  <main>
     <div class="boxx bg1 border bd3">
       <div class="inner-boxx">
         <!-- Cambiar por "post" en el futuro!-->
-        <form id="login-form" class="flex col" action="#" method="get">
+        <form class="flex col" action="#" method="get">
           <h2 style="margin-bottom: 5px;">Ingresar</h2>
 
           <label class="box border bd3" for="username">Usuario</label>
@@ -33,12 +33,6 @@ export default {
 /*main {
   min-height: 80.2vh;
 }*/
-
-header#form-header {
-  margin: 14px 7px 14px 7px;
-  padding: 5px;
-  border-radius: 10px;
-}
 
 button {
   font-size: 1rem;
@@ -72,7 +66,7 @@ label {
   opacity: 0.8;
   color: white;
   background-color: var(--color5);
-  box-shadow: 0px 2px 15px -3px rgba(0, 0, 0, 0.1), 2px 0px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.1), 2px 0 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -102,15 +96,16 @@ main {
   justify-content: center;
 }
 
-main#login-main .boxx {
+main .boxx {
   position: relative;
   width: 100%;
   max-width: 300px;
   height: 370px;
   border-radius: 10px;
+  box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.1), 2px 0 15px -3px rgba(0, 0, 0, 0.2);
 }
 
-main#login-main .inner-boxx {
+main .inner-boxx {
   position: absolute;
   width: calc(100% - 3.7rem);
   height: calc(100% - 3.7rem);
@@ -119,6 +114,10 @@ main#login-main .inner-boxx {
   transform: translate(-50%, -50%);
   /* background-color: tomato; */
 }
+
+/**
+ * Responsive
+*/
 
 @media (min-width: 450px) {
   /*
@@ -134,14 +133,22 @@ main#login-main .inner-boxx {
   main {
     min-height: 87vh;
   }
+}
 
-  header#form-header nav ul {
-    justify-content: space-between;
+/**
+ * Animations
+*/
 
-  }
+form button {
+  color: whitesmoke;
+  background-color: var(--color4);
+  box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.1), 2px 0 15px -3px rgba(0, 0, 0, 0.1);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.6s ease-in-out;
+}
 
-  header#form-header nav ul li {
-    flex-basis: 10em;
-  }
+form button:hover {
+  color: white;
+  background-color: var(--color5);
+  box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.1), 8px 0 15px -3px rgba(0, 0, 0, 0.1);
 }
 </style>
